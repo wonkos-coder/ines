@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="Ines.css">
+	<title>Nuestro universo</title>
+</head>
+<body>
+
+	<section id="night-sky">
+		<div id="stars-container"></div> <div class="hero-text">
+			<h1> Nuestro universo</h1>
+			<p>A veces miramos tanto a la luna que no podemos mirar bien a las estrellas</p>
+		</div>
+		
+		<a href="#razon1" class="star-link" style=" top: 25%; left: 15%;">🌟</a>
+		<a href="#razon2" class="star-link" style=" top: 55%; left: 75%;">🌟</a>
+		<a href="#razon3" class="star-link" style=" top: 80%; left: 35%;">🌟</a>
+		<a href="#razon4" class="star-link" style=" top: 70%; left: 65%;">🌟</a>
+		<a href="#razon5" class="star-link" style=" top: 90%; left: 90%;">🌟</a>
+	</section>
+	
+	<main>
+		<section id="razon1" class="reason-section">
+			<div class="card">
+				<img src="" alt="momento1">
+				<div class="card-text">
+					<h2>Razón #1</h2>
+					<p> compartimos estilo de vida</p>
+					<a href="#night-sky" class="back-link"> Volver al cielo</a>
+				</div>
+			</div>
+		</section>
+		
+		<section id="razon2" class="reason-section">
+			<div class="card">
+				<img src="" alt="momento1">
+				<div class="card-text">
+					<h2>Razón #2</h2>
+					<p>
+					<a href="#night-sky" class="back-link"> Volver al cielo</a>
+				</div>
+			</div>
+		</section>
+		
+		<section id="razon3" class="reason-section">
+			<div class="card">
+				<img src="" alt="momento1">
+				<div class="card-text">
+					<h2>Razón #3</h2>
+					<p>
+					<a href="#night-sky" class="back-link"> Volver al cielo</a>
+				</div>
+			</div>
+		</section>
+		
+		<section id="razon4" class="reason-section">
+			<div class="card">
+				<img src="" alt="momento1">
+				<div class="card-text">
+					<h2>Razón #4</h2>
+					<p>
+					<a href="#night-sky" class="back-link"> Volver al cielo</a>
+				</div>
+			</div>
+		</section>
+		
+		<section id="razon5" class="reason-section">
+			<div class="card">
+				<img src="" alt="momento1">
+				<div class="card-text">
+					<h2>Razón #5</h2>
+					<p>
+					<a href="#night-sky" class="back-link"> Volver al cielo</a>
+				</div>
+			</div>
+		</section>
+		
+	</main>
+	
+	<script>
+		const container = document.getElementById('stars-container');
+		for (let i = 0; i < 100; i++) {
+			const star = document.createElement('div');
+			star.ClassName = 'bg-star' ;
+			star.style.top = Math.random() * 100 + '%';
+			star.style.left = Math.random () *100 + '%'; 
+			star.style.animationDelay = Math.random() * 2 + 's';
+			container.appendChild(star);
+		}
+	</script>
+		
+	<footer>
+		<address>Hecho con amor por Daniel</p>
+	</footer>
+
+</body>
+</html>

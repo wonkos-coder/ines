@@ -1,0 +1,110 @@
+/*Scroll suave y general*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background-color: #050505;
+    color: white;
+    overflow-x: hidden;
+}
+
+/*Cielo*/
+#night-sky {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(elipse at bottom, #1B2735 0%, #090A0F 100%);
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/*Estrellas interactivas*/
+.star-link {
+    position: absolute;
+    font-size: 2rem;
+    text-decoration: none;
+    z-index: 20;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 10px white);
+}
+
+.star-link:hover {
+    transform: scale(1.8) rotate(20deg);
+}
+
+/*Estrellas de fondo*/
+
+#star-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bg-star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/*Sección de razones*/
+.reason-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/*Tarjeta de estilo*/
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 192, 203, 0.3);
+    border-radius: 20px;
+    max-width: 500px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.card-text {
+    padding: 30px;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: pink;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border: 1px solid pink;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
